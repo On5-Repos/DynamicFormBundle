@@ -1,0 +1,54 @@
+{
+    "name": "on5/dynamic-form-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony bundle providing helpers for dynamic forms.",
+    "homepage": "https://github.com/zikula/DynamicFormBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Craig Heydenburg",
+            "email": "craigh@mac.com"
+        },
+        {
+            "name": "Axel Guckelsberger",
+            "email": "info@guite.de"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "doctrine/orm": "^2.11",
+        "symfony/asset": "^5.4 || ^6.0",
+        "symfony/event-dispatcher-contracts": "^2.0 || ^3.0",
+        "symfony/form": "^5.4 || ^6.0",
+        "symfony/framework-bundle": "^5.4 || ^6.0",
+        "symfony/intl": "^5.4 || ^6.0",
+        "symfony/string": "^5.4 || ^6.0",
+        "symfony/translation": "^5.4 || ^6.0",
+        "symfony/translation-contracts": "^2.0 || ^3.0",
+        "symfony/twig-bundle": "^5.4 || ^6.0",
+        "symfony/validator": "^5.4 || ^6.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "3.26.1",
+        "phpstan/extension-installer": "1.3.1",
+        "phpstan/phpstan": "1.10.34",
+        "phpstan/phpstan-symfony": "1.3.2",
+        "phpunit/phpunit": "9.6.12",
+        "roave/security-advisories": "dev-latest"
+    },
+    "suggest": {
+        "scienta/doctrine-json-functions": "To extract and search for data within the json data."
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "autoload": {
+        "psr-4": { "Zikula\\Bundle\\DynamicFormBundle\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Zikula\\Bundle\\DynamicFormBundle\\Tests\\": "tests/" }
+    }
+}

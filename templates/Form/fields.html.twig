@@ -1,0 +1,20 @@
+{% block zikula_dynamic_field_collection_widget %}
+    <script src="{{ asset('bundles/zikuladynamicform/js/ZikulaDynamicFormBundle.DynamicProperty.Edit.js') }}" type="application/javascript"></script>
+
+    {# store the prototype on the data-prototype attribute#}
+    <ul id="dynamic-fields-list"
+        data-prototype="{{ form_widget(form.vars.prototype)|e }}"
+        data-widget-tags="{{ '<li></li>'|e }}"
+        data-widget-counter="{{ form|length }}">
+        {% for dynamicField in form %}
+            <li>
+                {{ form_errors(dynamicField) }}
+                {{ form_widget(dynamicField) }}
+                <button type="button" class="remove-from-collection">Remove this field</button>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <button type="button" class="add-another-collection-widget" data-list-selector="#dynamic-fields-list">Add another field</button>
+
+{% endblock %}
