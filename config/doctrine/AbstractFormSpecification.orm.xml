@@ -14,7 +14,7 @@
 
         <field name="formOptions" column="form_options" type="array"/>
 
-        <field name="active" column="active" type="boolean"/>gi
+        <field name="active" column="active" type="boolean"/>
 
         <field name="groups" column="groups" type="array"/>
 
