@@ -6,21 +6,17 @@
 
     <mapped-superclass name="Zikula\Bundle\DynamicFormBundle\Entity\AbstractFormSpecification">
 
-        <field name="name" column="name" type="string" length="255" nullable="false" />
+        <field name="name" column="name" type="string" length="255" nullable="false"/>
 
-        <field name="labels" column="labels" type="array" nullable="false" />
+        <field name="labels" column="labels" type="array" nullable="false"/>
 
-        <field name="formType" column="form_type" type="string" length="255" nullable="false" />
+        <field name="formType" column="form_type" type="string" length="255" nullable="false"/>
 
-        <field name="formOptions" column="form_options" type="array" />
+        <field name="formOptions" column="form_options" type="array"/>
 
-        <field name="active" column="active" type="boolean" />
+        <field name="active" column="active" type="boolean"/>
 
-        <field name="groups" column="groups" type="array" nullable="false">
-            <options>
-                <option name="default">a:0:{}</option><!-- needed for migration-->
-            </options>
-        </field>
+        <field name="groups" column="groups" type="array"/>
 
     </mapped-superclass>
 
