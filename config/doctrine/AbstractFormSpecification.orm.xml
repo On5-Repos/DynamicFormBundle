@@ -16,8 +16,6 @@
 
         <field name="active" column="active" type="boolean"/>
 
-        <field name="groups" column="groups" type="array"/>
-
     </mapped-superclass>
 
 </doctrine-mapping>
