@@ -20,12 +20,12 @@ use Symfony\Component\Form\DataTransformerInterface;
  */
 class DefaultLabelToLabelsTransformer implements DataTransformerInterface
 {
-    public function transform($value)
+    public function transform($value): mixed
     {
         return $value['default'] ?? '';
     }
 
-    public function reverseTransform($value)
+    public function reverseTransform($value): mixed
     {
         return ['default' => $value];
     }

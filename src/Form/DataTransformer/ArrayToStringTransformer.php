@@ -27,7 +27,7 @@ class ArrayToStringTransformer implements DataTransformerInterface
         $this->multiple = $multiple;
     }
 
-    public function transform($value)
+    public function transform($value): mixed
     {
         if (!$value) {
             return $this->multiple ? [] : '';
@@ -36,7 +36,7 @@ class ArrayToStringTransformer implements DataTransformerInterface
         return !$this->multiple ? $value : explode(',', $value);
     }
 
-    public function reverseTransform($value)
+    public function reverseTransform($value): mixed
     {
         if (!$value) {
             return '';
